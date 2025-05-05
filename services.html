@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - StudyShades</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles just for this page */
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .service-card {
+            flex: 1 1 300px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #2c3e50;
+        }
+        
+        .service-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">STUDYSHADES</div>
+        <p>Premium Home Tutoring in Hyderabad</p>
+    </header>
+    
+    <nav>
+        <button class="menu-btn" id="menuBtn">Menu ☰</button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h1>Our Tutoring Services</h1>
+            <p>We offer personalized home tutoring for students in Hyderabad. All classes are conducted one-on-one at the student's home.</p>
+            
+            <div class="services-list">
+                <div class="service-card">
+                    <h3>Classes 6 to 10</h3>
+                    <p>All subjects including:</p>
+                    <ul>
+                        <li>Mathematics</li>
+                        <li>Science (Physics, Chemistry, Biology)</li>
+                        <li>Social Studies</li>
+                        <li>English</li>
+                        <li>Hindi</li>
+                        <li>Telugu</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Classes 11 & 12 (Commerce)</h3>
+                    <p>Commerce stream subjects:</p>
+                    <ul>
+                        <li>Accountancy</li>
+                        <li>Economics</li>
+                        <li>Business Studies</li>
+                        <li>Mathematics</li>
+                        <li>English</li>
+                        <li>Commerce Computer Applications</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Our Teaching Methodology</h2>
+            <p>For each student, we develop a customized learning plan that includes:</p>
+            <ul>
+                <li>Initial assessment to identify strengths and weaknesses</li>
+                <li>Regular progress tracking</li>
+                <li>Exam preparation strategies</li>
+                <li>Concept clarification and doubt resolution</li>
+                <li>Practice with previous year question papers</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 StudyShades. All rights reserved.</p>
+        <p>Premium Home Tutoring in Hyderabad</p>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            var menu = document.getElementById('navMenu');
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

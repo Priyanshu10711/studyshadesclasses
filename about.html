@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - StudyShades</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles just for this page */
+        .tutor-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .tutor-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        @media (max-width: 600px) {
+            .tutor-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">STUDYSHADES</div>
+        <p>Premium Home Tutoring in Hyderabad</p>
+    </header>
+    
+    <nav>
+        <button class="menu-btn" id="menuBtn">Menu ☰</button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h1>About Our Tutor</h1>
+            <div class="tutor-info">
+                <div class="tutor-photo">Tutor Photo</div>
+                <div>
+                    <p>StudyShades is run by a dedicated educator with over 10 years of experience teaching students from classes 6 through 12.</p>
+                    <p>Our tutor holds a Master's degree in Commerce and has helped hundreds of students achieve academic success.</p>
+                </div>
+            </div>
+            
+            <h2>Our Approach</h2>
+            <p>At StudyShades, we believe in:</p>
+            <ul>
+                <li>Building strong foundational knowledge in each subject</li>
+                <li>Creating a comfortable learning environment at home</li>
+                <li>Adapting teaching methods to each student's learning style</li>
+                <li>Maintaining open communication with parents</li>
+                <li>Keeping class sizes small to ensure individual attention</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 StudyShades. All rights reserved.</p>
+        <p>Premium Home Tutoring in Hyderabad</p>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            var menu = document.getElementById('navMenu');
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - StudyShades</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles just for this page */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contact-form input, 
+        .contact-form textarea, 
+        .contact-form select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .contact-form button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .service-areas {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">STUDYSHADES</div>
+        <p>Premium Home Tutoring in Hyderabad</p>
+    </header>
+    
+    <nav>
+        <button class="menu-btn" id="menuBtn">Menu ☰</button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h1>Contact StudyShades</h1>
+            
+            <div class="service-areas">
+                <h2>Service Areas</h2>
+                <p>We currently serve these areas in Western Hyderabad:</p>
+                <ul>
+                    <li>Gachibowli</li>
+                    <li>Financial District</li>
+                    <li>Hitec City</li>
+                    <li>Kondapur</li>
+                    <li>Madhapur</li>
+                    <li>Jubilee Hills</li>
+                </ul>
+            </div>
+            
+            <h2>Send an Inquiry</h2>
+            <form class="contact-form" id="inquiryForm">
+                <input type="text" id="name" placeholder="Parent's Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                
+                <select id="class" required>
+                    <option value="">Select Class</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                    <option value="11">Class 11 (Commerce)</option>
+                    <option value="12">Class 12 (Commerce)</option>
+                </select>
+                
+                <select id="subject" required>
+                    <option value="">Select Subject(s)</option>
+                    <option value="all">All Subjects (Classes 6-10)</option>
+                    <option value="math">Mathematics</option>
+                    <option value="science">Science</option>
+                    <option value="accounts">Accountancy</option>
+                    <option value="economics">Economics</option>
+                    <option value="business">Business Studies</option>
+                </select>
+                
+                <textarea id="message" placeholder="Your Message (Optional)" rows="4"></textarea>
+                
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 StudyShades. All rights reserved.</p>
+        <p>Premium Home Tutoring in Hyderabad</p>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            var menu = document.getElementById('navMenu');
+            menu.classList.toggle('show');
+        });
+        
+        // Form validation
+        document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var studentClass = document.getElementById('class').value;
+            var subject = document.getElementById('subject').value;
+            
+            // Simple validation
+            if (name === '' || email === '' || phone === '' || studentClass === '' || subject === '') {
+                alert('Please fill in all required fields!');
+                return;
+            }
+            
+            // Check email format
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Please enter a valid email address!');
+                return;
+            }
+            
+            // Check phone number
+            if (phone.length < 10) {
+                alert('Please enter a valid phone number!');
+                return;
+            }
+            
+            // If everything is OK
+            alert('Thank you for your inquiry! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
